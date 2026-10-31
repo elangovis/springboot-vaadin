@@ -1,0 +1,191 @@
+:root {
+  --lumo-font-family: 'Segoe UI', sans-serif;
+  --lumo-primary-color: #6758e8;
+  --lumo-primary-color-50pct: rgba(103, 88, 232, 0.5);
+  --lumo-primary-color-10pct: rgba(103, 88, 232, 0.1);
+  --lumo-border-radius-m: 10px;
+  color: #24233a;
+  background: #f7f7fb;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(119, 105, 235, 0.09), transparent 34rem),
+    #f7f7fb;
+}
+
+.login-page {
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: min(100%, 410px);
+  padding: 42px;
+  box-sizing: border-box;
+  border: 1px solid #eeedf5;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(34, 31, 74, 0.09);
+}
+
+.brand-mark {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #6758e8;
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.login-title,
+.dashboard-title,
+.welcome-panel h2 {
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: -0.045em;
+}
+
+.login-title {
+  margin: 26px 0 7px;
+  font-size: 29px;
+  line-height: 1.2;
+}
+
+.login-subtitle {
+  margin: 0 0 25px;
+  color: #77768a;
+  font-size: 14px;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-form::part(form) {
+  gap: 14px;
+}
+
+.login-form vaadin-button[part~='vaadin-login-submit'] {
+  min-height: 46px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.login-hint {
+  margin: 23px 0 0;
+  padding: 12px 14px;
+  border-radius: 9px;
+  background: #f7f6ff;
+  color: #6f6b8f;
+  font-size: 12px;
+  text-align: center;
+}
+
+.dashboard-page {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.dashboard-header {
+  min-height: 76px;
+  padding: 0 clamp(24px, 7vw, 100px);
+  box-sizing: border-box;
+  border-bottom: 1px solid #ecebf2;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.brand-group .brand-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  font-size: 17px;
+}
+
+.sign-out-button {
+  color: #5e5c70;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dashboard-content {
+  width: min(100% - 48px, 850px);
+  margin: 0 auto;
+  padding: clamp(52px, 9vw, 104px) 0;
+}
+
+.eyebrow {
+  color: #7568e5;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.dashboard-title {
+  margin: 13px 0 10px;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.12;
+}
+
+.dashboard-intro {
+  margin: 0;
+  color: #77768a;
+  font-size: 16px;
+}
+
+.welcome-panel {
+  position: relative;
+  margin-top: 42px;
+  padding: 28px 30px 26px 34px;
+  overflow: hidden;
+  border: 1px solid #eeedf5;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(34, 31, 74, 0.045);
+}
+
+.welcome-panel h2 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+
+.welcome-panel p {
+  max-width: 580px;
+  margin: 0;
+  color: #77768a;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.status-dot {
+  position: absolute;
+  top: 34px;
+  left: 17px;
+  color: #3ab78a;
+  font-size: 10px;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 32px 24px;
+  }
+}

@@ -1,0 +1,6 @@
+target/
+.vaadin/
+src/main/frontend/generated/
+node_modules/
+.idea/
+*.iml

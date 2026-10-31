@@ -63,7 +63,7 @@ public class DashboardView extends VerticalLayout {
         H1 welcome = new H1("You’re signed in, " + username + ".");
         welcome.addClassName("dashboard-title");
 
-        Paragraph intro = new Paragraph("Your Spring Boot and Vaadin login is working.");
+        Paragraph intro = new Paragraph("Your Spring Boot and Vaadin app is up and running.");
         intro.addClassName("dashboard-intro");
 
         Div panel = new Div();

@@ -9,7 +9,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @Route("login")
-@PageTitle("Sign in | Acme")
+@PageTitle("Sign in | Aadish")
 public class LoginView extends VerticalLayout {
 
     public LoginView() {

@@ -17,7 +17,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 @Route("")
-@PageTitle("Dashboard | Acme")
+@PageTitle("Dashboard | Aadish")
 @PermitAll
 public class DashboardView extends VerticalLayout {
 
@@ -38,11 +38,14 @@ public class DashboardView extends VerticalLayout {
         Span brand = new Span("A");
         brand.addClassName("brand-mark");
 
-        Span brandName = new Span("Acme");
+        Span brandName = new Span("Aadish");
         brandName.addClassName("brand-name");
 
         Div brandGroup = new Div(brand, brandName);
         brandGroup.addClassName("brand-group");
+
+        Button cart = new Button("View cart", event -> UI.getCurrent().navigate(CartView.class));
+        cart.addClassName("header-action-button");
 
         Button signOut = new Button("Sign out", event -> {
             VaadinSession.getCurrent().getSession().invalidate();
@@ -51,7 +54,7 @@ public class DashboardView extends VerticalLayout {
         });
         signOut.addClassName("sign-out-button");
 
-        header.add(brandGroup, signOut);
+        header.add(brandGroup, cart, signOut);
         header.expand(brandGroup);
 
         Div content = new Div();
@@ -63,7 +66,7 @@ public class DashboardView extends VerticalLayout {
         H1 welcome = new H1("You’re signed in, " + username + ".");
         welcome.addClassName("dashboard-title");
 
-        Paragraph intro = new Paragraph("Your Spring Boot and Vaadin app is up and running.");
+        Paragraph intro = new Paragraph("Your Spring Boot and Vaadin app is up and running now.");
         intro.addClassName("dashboard-intro");
 
         Div panel = new Div();
